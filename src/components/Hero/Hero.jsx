@@ -67,7 +67,7 @@ const Hero = () => {
 
                             <div className="relative z-10 bg-white p-4 rounded-3xl shadow-xl">
                                 <Image
-                                    src="/images/phone-mockup.png"
+                                    src="../../../public/person-image.png"
                                     alt="Phone"
                                     width={500}
                                     height={500}
@@ -76,7 +76,7 @@ const Hero = () => {
 
                                 <div className="absolute right-0 bottom-0 transform translate-x-1/4 z-20">
                                     <Image
-                                        src="/images/person-image.png"
+                                        src="../../../public/phone-mockup.png"
                                         alt="Person"
                                         width={300}
                                         height={300}
