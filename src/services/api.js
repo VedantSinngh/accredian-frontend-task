@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api/referrals';
+const API_BASE_URL = 'https://accredian-backend.onrender.com';
 
 export const submitReferral = async (referralData) => {
   try {
-    const response = await axios.post(`${API_URL}/referrals`, referralData);
+    const response = await axios.post(`${API_BASE_URL}/api/referrals`, referralData);
     return response.data;
   } catch (error) {
-    const errorMessage = error.response?.data?.message || 'Failed to submit referral';
+    const errorMessage = error?.response?.data?.message || error.message || 'Failed to submit referral';
     throw new Error(errorMessage);
   }
 };
